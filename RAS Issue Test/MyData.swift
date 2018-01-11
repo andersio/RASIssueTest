@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MyData.swift
 //  RAS Issue Test
 //
 //  Created by Anthony Beard on 2018/01/11.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MyData: NSObject {
 
 }

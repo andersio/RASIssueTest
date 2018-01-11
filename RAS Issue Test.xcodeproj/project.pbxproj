@@ -13,7 +13,9 @@
 		926887BE20077B390017915B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926887BC20077B390017915B /* Main.storyboard */; };
 		926887C020077B390017915B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926887BF20077B390017915B /* Assets.xcassets */; };
 		926887C320077B390017915B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926887C120077B390017915B /* LaunchScreen.storyboard */; };
-		926887CB20077B960017915B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887CA20077B960017915B /* MainViewController.swift */; };
+		926887CD20077E970017915B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887CC20077E970017915B /* ApiManager.swift */; };
+		926887CF20077F050017915B /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887CE20077F050017915B /* MyData.swift */; };
+		926887D120077F1E0017915B /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887D020077F1E0017915B /* DataCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,9 @@
 		926887BF20077B390017915B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		926887C220077B390017915B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		926887C420077B390017915B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		926887CA20077B960017915B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		926887CC20077E970017915B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		926887CE20077F050017915B /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
+		926887D020077F1E0017915B /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		BC9CD34E84A730F09CBC9D17 /* Pods-RAS Issue Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAS Issue Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAS Issue Test/Pods-RAS Issue Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +87,9 @@
 				926887B820077B390017915B /* AppDelegate.swift */,
 				926887BA20077B390017915B /* ViewController.swift */,
 				926887BC20077B390017915B /* Main.storyboard */,
-				926887CA20077B960017915B /* MainViewController.swift */,
+				926887CC20077E970017915B /* ApiManager.swift */,
+				926887D020077F1E0017915B /* DataCache.swift */,
+				926887CE20077F050017915B /* MyData.swift */,
 				926887BF20077B390017915B /* Assets.xcassets */,
 				926887C120077B390017915B /* LaunchScreen.storyboard */,
 				926887C420077B390017915B /* Info.plist */,
@@ -224,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926887CB20077B960017915B /* MainViewController.swift in Sources */,
+				926887CD20077E970017915B /* ApiManager.swift in Sources */,
+				926887D120077F1E0017915B /* DataCache.swift in Sources */,
 				926887BB20077B390017915B /* ViewController.swift in Sources */,
+				926887CF20077F050017915B /* MyData.swift in Sources */,
 				926887B920077B390017915B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "RAS Issue Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.RAS-Issue-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "RAS Issue Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.RAS-Issue-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";

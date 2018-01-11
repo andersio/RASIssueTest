@@ -7,19 +7,29 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import Result
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var loadingLabel: UILabel!
+    
+    private let loadData = MutableProperty(())
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.loadingLabel.text = "Loading..."
+        self.loadingLabel.reactive.text <~ self.loadData.signal
+            .flatMap(.latest) { () -> SignalProducer<([MyData], [MyData], [MyData]), NoError> in
+                return SignalProducer.zip(
+                    ApiManager.shared.getDataA(), // Sometimes terminates without values
+                    ApiManager.shared.getDataB(), // Sometimes terminates without values
+                    ApiManager.shared.getDataC() // Sometimes terminates without values
+                )
+            }
+            .map { _, _, _ in
+                return "Loaded!"
+        }
+        
+        self.loadData.value = ()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
