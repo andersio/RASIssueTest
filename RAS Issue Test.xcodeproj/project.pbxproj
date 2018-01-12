@@ -16,6 +16,10 @@
 		926887CD20077E970017915B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887CC20077E970017915B /* ApiManager.swift */; };
 		926887CF20077F050017915B /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887CE20077F050017915B /* MyData.swift */; };
 		926887D120077F1E0017915B /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887D020077F1E0017915B /* DataCache.swift */; };
+		926887D3200785C40017915B /* Issue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926887D2200785C40017915B /* Issue.storyboard */; };
+		926887D5200785FF0017915B /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887D4200785FF0017915B /* IssueViewController.swift */; };
+		926887D9200787070017915B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887D8200787070017915B /* AppCoordinator.swift */; };
+		926887DB200789030017915B /* IssueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926887DA200789030017915B /* IssueCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		926887CC20077E970017915B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		926887CE20077F050017915B /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
 		926887D020077F1E0017915B /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		926887D2200785C40017915B /* Issue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Issue.storyboard; sourceTree = "<group>"; };
+		926887D4200785FF0017915B /* IssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
+		926887D8200787070017915B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		926887DA200789030017915B /* IssueCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCoordinator.swift; sourceTree = "<group>"; };
 		BC9CD34E84A730F09CBC9D17 /* Pods-RAS Issue Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAS Issue Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAS Issue Test/Pods-RAS Issue Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,14 +95,34 @@
 				926887B820077B390017915B /* AppDelegate.swift */,
 				926887BA20077B390017915B /* ViewController.swift */,
 				926887BC20077B390017915B /* Main.storyboard */,
-				926887CC20077E970017915B /* ApiManager.swift */,
-				926887D020077F1E0017915B /* DataCache.swift */,
-				926887CE20077F050017915B /* MyData.swift */,
+				926887D8200787070017915B /* AppCoordinator.swift */,
+				926887D6200786C40017915B /* Common */,
+				926887D7200786D60017915B /* Issue */,
 				926887BF20077B390017915B /* Assets.xcassets */,
 				926887C120077B390017915B /* LaunchScreen.storyboard */,
 				926887C420077B390017915B /* Info.plist */,
 			);
 			path = "RAS Issue Test";
+			sourceTree = "<group>";
+		};
+		926887D6200786C40017915B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				926887CC20077E970017915B /* ApiManager.swift */,
+				926887D020077F1E0017915B /* DataCache.swift */,
+				926887CE20077F050017915B /* MyData.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		926887D7200786D60017915B /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				926887DA200789030017915B /* IssueCoordinator.swift */,
+				926887D2200785C40017915B /* Issue.storyboard */,
+				926887D4200785FF0017915B /* IssueViewController.swift */,
+			);
+			path = Issue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +189,7 @@
 			files = (
 				926887C320077B390017915B /* LaunchScreen.storyboard in Resources */,
 				926887C020077B390017915B /* Assets.xcassets in Resources */,
+				926887D3200785C40017915B /* Issue.storyboard in Resources */,
 				926887BE20077B390017915B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +263,10 @@
 				926887D120077F1E0017915B /* DataCache.swift in Sources */,
 				926887BB20077B390017915B /* ViewController.swift in Sources */,
 				926887CF20077F050017915B /* MyData.swift in Sources */,
+				926887D5200785FF0017915B /* IssueViewController.swift in Sources */,
 				926887B920077B390017915B /* AppDelegate.swift in Sources */,
+				926887DB200789030017915B /* IssueCoordinator.swift in Sources */,
+				926887D9200787070017915B /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,12 +404,15 @@
 			baseConfigurationReference = BC9CD34E84A730F09CBC9D17 /* Pods-RAS Issue Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "RAS Issue Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.RAS-Issue-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,12 +423,15 @@
 			baseConfigurationReference = 75637F99C7508543DA39D40D /* Pods-RAS Issue Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "RAS Issue Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.RAS-Issue-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

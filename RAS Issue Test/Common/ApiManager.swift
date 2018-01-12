@@ -15,16 +15,16 @@ class ApiManager {
     static let shared = ApiManager()
     private init() {}
     
-    private let scheduler = QueueScheduler(qos: .background, name: "MyProject.ApiManager")
+    private let scheduler = QueueScheduler(qos: .utility, name: "MyProject.ApiManager")
     
     func getDataA() -> SignalProducer<[MyData], NoError> {
-        return self.mockGetData(count: 1, delay: 1)
+        return self.mockGetData(count: 1, delay: 0)
     }
     func getDataB() -> SignalProducer<[MyData], NoError> {
-        return self.mockGetData(count: 2, delay: 1)
+        return self.mockGetData(count: 2, delay: 0)
     }
     func getDataC() -> SignalProducer<[MyData], NoError> {
-        return self.mockGetData(count: 3, delay: 1)
+        return self.mockGetData(count: 3, delay: 0)
     }
     
     private func mockGetData(count: Int, delay: TimeInterval) -> SignalProducer<[MyData], NoError> {
