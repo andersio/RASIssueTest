@@ -15,7 +15,7 @@ class ApiManager {
     static let shared = ApiManager()
     private init() {}
     
-    private let scheduler = QueueScheduler(qos: .utility, name: "MyProject.ApiManager")
+    private let scheduler = QueueScheduler(qos: .userInitiated, name: "MyProject.ApiManager")
     
     func getDataA() -> SignalProducer<[MyData], NoError> {
         return self.mockGetData(count: 1, delay: 0)
@@ -39,6 +39,14 @@ class ApiManager {
             observer.send(value: dataItems)
             observer.sendCompleted()
             }
-            .delay(delay, on: self.scheduler)
+            .observe(on: self.scheduler)
+           // .delay(delay, on: self.scheduler)
+        /*
+            .on(started: {
+                // Jam the scheduler
+                self.scheduler.schedule {
+                    usleep(100)
+                }
+            })*/
     }
 }

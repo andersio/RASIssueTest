@@ -24,16 +24,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPO-ZP-SUK">
+                                <rect key="frame" x="166" y="535" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="VbB-LM-6dO" firstAttribute="bottom" secondItem="LPO-ZP-SUK" secondAttribute="bottom" constant="62" id="2aZ-75-3wc"/>
                             <constraint firstItem="ht1-ei-kdp" firstAttribute="centerY" secondItem="VbB-LM-6dO" secondAttribute="centerY" id="IkG-VN-OMS"/>
                             <constraint firstItem="ht1-ei-kdp" firstAttribute="centerX" secondItem="VbB-LM-6dO" secondAttribute="centerX" id="LML-Gh-bXd"/>
+                            <constraint firstItem="LPO-ZP-SUK" firstAttribute="centerX" secondItem="VbB-LM-6dO" secondAttribute="centerX" id="a5d-o0-1Oz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VbB-LM-6dO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Oo7-8y-zQk"/>
                     <connections>
+                        <outlet property="countLabel" destination="LPO-ZP-SUK" id="AoP-aA-9WX"/>
                         <outlet property="loadingLabel" destination="ht1-ei-kdp" id="dgW-cT-wjf"/>
                     </connections>
                 </viewController>

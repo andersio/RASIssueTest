@@ -6,6 +6,6 @@ target 'RAS Issue Test' do
   use_frameworks!
 
   # Pods for RAS Issue Test
-  pod 'ReactiveCocoa', '~> 7.0'
+  pod 'ReactiveCocoa', '7.0.1'
 
 end
